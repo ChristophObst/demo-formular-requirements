@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>🔑 Password Manager</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script src="./js/index.js" defer></script>
+  </head>
+  <body>
+    <main class="app">
+      <h1 class="app__title">
+        Password Manager
+        <span role="img" aria-label="A key emoji that represents security"
+          >🔑</span
+        >
+      </h1>
+      <section class="app__form">
+        <h2 class="app__headline">Add new credentials</h2>
+        <form class="form" data-js="form">
+          <!-- Title -->
+          <label class="form__label" for="title">Title:</label>
+          <input
+            type="text"
+            class="form__field"
+            id="title"
+            name="title"
+            data-js="title-input"
+          />
+          <!-- Email -->
+          <label class="form__label" for="email">Email:</label>
+          <input
+            required
+            type="email"
+            class="form__field"
+            id="email"
+            name="email"
+          />
+
+          <!-- Password -->
+          <label class="form__label" for="password">Password:</label>
+          <input
+            minlength="8"
+            ;
+            type="password"
+            class="form__field"
+            id="password"
+            name="password"
+            data-js="password-input"
+          />
+
+          <!-- Password Hint -->
+          <span class="form__field--hint" data-js="password-hint"></span>
+          <button class="form__submit" type="submit">Save credentials</button>
+        </form>
+      </section>
+      <section class="app__storage">
+        <h2 class="app__headline">Your saved credentials</h2>
+        <ul class="storage" data-js="storage"></ul>
+      </section>
+    </main>
+  </body>
+</html>
